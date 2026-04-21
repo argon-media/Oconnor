@@ -381,6 +381,28 @@ a.trust-chip:hover{ transform: translateY(-2px); }
 .trust-chip-glogo{ width: 20px; height: 20px; }
 .trust-chip-logo{ height: 34px; width: auto; display: block; object-fit: contain; }
 .trust-chip--logo{ gap: 8px; }
+.cci-mark{ display: inline-flex; align-items: center; gap: 8px; line-height: 1; }
+.cci-mark-word{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 30px;
+  letter-spacing: -0.04em;
+  color: #ff6b1a;
+  text-transform: lowercase;
+  line-height: 1;
+}
+.cci-mark-sub{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--on-dark-mute);
+  white-space: nowrap;
+  border-left: 1px solid var(--line);
+  padding-left: 8px;
+}
 .trust-chip-sep{
   width: 1px;
   height: 28px;
@@ -578,9 +600,10 @@ a.trust-item:hover{
   border-color: color-mix(in oklab, var(--accent) 55%, transparent);
   background: var(--ink-3);
 }
+.service-card--half{ grid-column: span 2; }
 .service-card--featured{
   grid-column: span 2;
-  grid-row: span 2;
+  grid-row: span 1;
   padding: 0;
   gap: 0;
   min-height: 0;
@@ -603,18 +626,68 @@ a.trust-item:hover{
 /* Featured card inline testimonials */
 .service-card--featured .service-quotes{
   margin-top: auto;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
+  padding-top: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
-.service-card--featured .service-quote{ display:flex; flex-direction:column; gap:6px; }
-.service-card--featured .service-quote-stars{ display:inline-flex; gap:2px; color:#f5b400; font-size:13px; letter-spacing:1px; }
-.service-card--featured .service-quote-text{ font-size:14px; line-height:1.5; color: var(--on-dark); margin:0; font-style: italic; }
-.service-card--featured .service-quote-attr{ font-size:12px; color: var(--on-dark-mute); font-family: 'JetBrains Mono', monospace; letter-spacing:.04em; }
-@media (max-width: 720px){
-  .service-card--featured .service-quotes{ grid-template-columns: 1fr; }
+.service-card--featured .service-quote{
+  position: relative;
+  margin: 0;
+  padding: 20px 22px;
+  background: rgba(0,0,0,.22);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s, 14px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.service-card--featured .service-quote-mark{
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+  opacity: .9;
+}
+.service-card--featured .service-quote-stars{
+  display:inline-flex;
+  gap:3px;
+  color: var(--accent);
+  font-size:15px;
+  letter-spacing:2px;
+  line-height:1;
+}
+.service-card--featured .service-quote-text{
+  font-size:14.5px;
+  line-height:1.55;
+  color: var(--on-dark);
+  margin:0;
+  font-style: normal;
+  font-weight: 400;
+}
+.service-card--featured .service-quote-foot{
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.service-card--featured .service-quote-name{
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--on-dark);
+  letter-spacing: -0.01em;
+}
+.service-card--featured .service-quote-attr{
+  font-size:11px;
+  color: var(--on-dark-mute);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing:.1em;
+  text-transform: uppercase;
 }
 
 /* non-featured card media */
