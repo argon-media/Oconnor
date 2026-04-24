@@ -6,6 +6,30 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
+<script>
+  // Kill any service workers registered by previous deployments and clear their caches.
+  // Fixes "new page flashes then reverts to old" caused by stale SW hijacking navigations.
+  (function () {
+    try {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          var hadSw = regs && regs.length > 0;
+          regs.forEach(function (r) { r.unregister(); });
+          if (typeof caches !== 'undefined' && caches.keys) {
+            caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+            }).then(function () {
+              if (hadSw && !sessionStorage.getItem('__sw_killed')) {
+                sessionStorage.setItem('__sw_killed', '1');
+                location.reload();
+              }
+            });
+          }
+        });
+      }
+    } catch (e) {}
+  })();
+</script>
 <title>O'Connor Detailing — Ceramic Coating & Paint Correction in Peoria, IL</title>
 <meta name="description" content="Peoria's CCI-certified ceramic coating and paint correction shop. Honest work, clear pricing, real results. Licensed and insured. Book a free quote." />
 
