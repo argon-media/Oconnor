@@ -93,14 +93,8 @@
     if (key === 'hero')   document.body.dataset.hero   = val;
     if (key === 'cards')  document.body.dataset.cards  = val;
     if (key === 'headline') {
-      const h1 = document.querySelector('.hero-title');
-      if (!h1) return;
-      const options = {
-        outcome:  `Two guys. One garage. Our standards.`,
-        local:    `Ceramic coating and careful detailing. <em>Peoria Heights, IL.</em>`,
-        underdog: `Two guys, one garage, <em>our own standards.</em>`,
-      };
-      h1.innerHTML = options[val] || options.outcome;
+      // Headline is authored directly in index.html. Tweak panel no longer overrides it.
+      return;
     }
     // reflect active state in panel
     document.querySelectorAll('[data-accent]').forEach(b => b.classList.toggle('active', b.dataset.accent === TWEAKS.accent));
