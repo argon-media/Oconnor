@@ -1511,9 +1511,15 @@ a.cta-contact-row:hover{ background: rgba(255,255,255,.04); }
   .mobile-cta{ display: flex; }
   body{ padding-bottom: 76px; }
   .trust-inner{ grid-template-columns: 1fr 1fr; gap: 12px; }
-  .services-grid{ grid-template-columns: 1fr; }
+  .services-grid{ grid-template-columns: 1fr; gap: 14px; }
   .service-card--featured{ grid-column: span 1; min-height: 0; }
   .service-card--featured .service-media{ aspect-ratio: 16/10; }
+  .service-card--featured .service-body{ padding: 22px 22px 24px; }
+  .service-card--half{ grid-column: span 1; }
+  .services .section-head h2{ font-size: clamp(26px, 7vw, 34px); line-height: 1.2; }
+  .services .section-intro{ font-size: 15px; }
+  .services-cta{ flex-direction: column; align-items: stretch; }
+  .services-cta .btn{ width: 100%; justify-content: center; }
   .ba-row{ grid-template-columns: 1fr; }
   .process-steps{ grid-template-columns: 1fr; }
   .process-steps::before{ display:none; }
