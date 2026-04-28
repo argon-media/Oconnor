@@ -379,7 +379,7 @@ a.trust-chip:hover{ transform: translateY(-2px); }
   white-space: nowrap;
 }
 .trust-chip-glogo{ width: 20px; height: 20px; }
-.trust-chip-logo{ height: 34px; width: auto; display: block; object-fit: contain; }
+.trust-chip-logo{ height: 44px; width: auto; display: block; object-fit: contain; }
 .trust-chip--logo{ gap: 8px; }
 .cci-mark{ display: inline-flex; align-items: center; gap: 8px; line-height: 1; }
 .cci-mark-word{
