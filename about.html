@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script>
+  (function () {
+    try {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          var hadSw = regs && regs.length > 0;
+          regs.forEach(function (r) { r.unregister(); });
+          if (typeof caches !== 'undefined' && caches.keys) {
+            caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+            }).then(function () {
+              if (hadSw && !sessionStorage.getItem('__sw_killed')) {
+                sessionStorage.setItem('__sw_killed', '1');
+                location.reload();
+              }
+            });
+          }
+        });
+      }
+    } catch (e) {}
+  })();
+</script>
+<title>About O'Connor Detailing — Griffin & Grayson · Peoria Heights, IL</title>
+<meta name="description" content="Meet Griffin O'Connor and Grayson Smiley — the two-man crew behind O'Connor Detailing. CCI-certified, licensed, and obsessed with doing detailing right." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="About O'Connor Detailing — Peoria, IL" />
+<meta property="og:description" content="Two guys, one shop. The story behind O'Connor Detailing — a CCI-certified, independently owned ceramic coating studio in Peoria Heights." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+<!-- LocalBusiness schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  "name": "O'Connor Detailing",
+  "image": "assets/logo.png",
+  "telephone": "+1-309-229-4277",
+  "email": "detailingoconnor@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4716 N Ellen Ct",
+    "addressLocality": "Peoria Heights",
+    "addressRegion": "IL",
+    "postalCode": "61616",
+    "addressCountry": "US"
+  },
+  "founder": [
+    { "@type": "Person", "name": "Griffin O'Connor", "jobTitle": "Founder / CEO" },
+    { "@type": "Person", "name": "Grayson Smiley", "jobTitle": "Shop Manager / Lead Tech" }
+  ],
+  "foundingDate": "2023",
+  "url": "https://oconnor-detailing.example/about.html",
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <!-- ====================== STICKY HEADER ====================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="O'Connor Detailing, home">
+        <img src="assets/logo.png" alt="O'Connor Detailing" class="brand-logo" />
+        <span class="brand-sub brand-sub--header">Peoria Heights, IL</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-item has-menu">
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true" data-menu="services">Services <span class="caret">▾</span></button>
+          <div class="menu" id="menu-services" role="menu">
+            <a href="index.html#ceramic" role="menuitem"><strong>Ceramic Coatings</strong><em>Long-term paint protection</em></a>
+            <a href="index.html#maintenance" role="menuitem"><strong>Maintenance Detailing</strong><em>Keep it new between visits</em></a>
+            <a href="index.html#correction" role="menuitem"><strong>Paint Correction</strong><em>Swirl & scratch removal</em></a>
+            <a href="index.html#tint" role="menuitem"><strong>Window Tinting</strong><em>Heat & UV rejection</em></a>
+            <a href="index.html#undercoat" role="menuitem"><strong>Undercoating</strong><em>Rust prevention for IL winters</em></a>
+          </div>
+        </div>
+        <a href="index.html#gallery" class="nav-link">Our Work</a>
+        <a href="about.html" class="nav-link" aria-current="page">About</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:+13092294277" class="phone-link" aria-label="Call O'Connor Detailing">
+          <span class="phone-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="phone-numbers">
+            <span class="phone-label">Call the shop</span>
+            <span class="phone-number">(309) 229-4277</span>
+          </span>
+        </a>
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+
+      <button class="menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Our Work</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <div class="drawer-cta">
+        <a href="tel:+13092294277" class="btn btn-ghost-dark">(309) 229-4277</a>
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <a id="top"></a>
+
+  <!-- ====================== PAGE HERO ====================== -->
+  <section class="hero hero--centered">
+    <div class="hero-inner">
+      <div class="eyebrow eyebrow--light">About us</div>
+      <h1 class="hero-title">
+        Two guys. One shop.<br />
+        <em>Every car gets our full attention.</em>
+      </h1>
+      <p class="hero-sub">
+        We started O'Connor Detailing because Peoria deserved a real, independent ceramic coating shop — not a dealership add-on.
+      </p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
+        <a href="index.html#gallery" class="btn btn-ghost btn-lg">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== TRUST BAR ====================== -->
+  <section class="trust-bar" aria-label="Credentials">
+    <div class="container">
+      <div class="trust-strip">
+        <div class="trust-chip">
+          <span class="trust-chip-num">100+</span>
+          <span class="trust-chip-label">5-Star Google Reviews</span>
+        </div>
+        <div class="trust-chip-sep" aria-hidden="true"></div>
+        <div class="trust-chip trust-chip--logo trust-chip--logo-only">
+          <img src="assets/cci-logo.png" alt="CCI — Ceramic Coating Inc, Multi-Certified Installer" class="trust-chip-logo" />
+        </div>
+        <div class="trust-chip-sep" aria-hidden="true"></div>
+        <div class="trust-chip">
+          <span class="trust-chip-num">EST. 2023</span>
+          <span class="trust-chip-label">Peoria&nbsp;Heights, IL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== STORY ====================== -->
+  <section class="about" id="story">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <div class="eyebrow">Our story</div>
+        <h2>Not a chain. Not a dealership. <em>Just us.</em></h2>
+        <p>
+          O'Connor Detailing is a small, independently-owned shop in Peoria Heights — just me and my partner Grayson, both 24, both fully in on this. I started detailing on the side while studying automotive tech in college. Upon graduating in May of 2023, I took a private training course in paint correction and ceramic coating and went all-in.
+        </p>
+        <p>
+          We're not a dealership. We're not a corporate chain. We're the underdogs, and that's the way we like it. It means we answer our own phones, we know every car and face that comes through the door, and we care more about our clients succeeding and benefiting from our services than we do about making a dollar.
+        </p>
+        <p>
+          When you book with us, your car isn't getting handed off to a rotation of techs. It's the two of us, every time. That's how we keep the work consistent — and how we keep the bar high.
+        </p>
+        <div class="about-sig">
+          <div>
+            <strong>Griffin O'Connor</strong>
+            <em>Founder · CEO</em>
+          </div>
+          <div>
+            <strong>Grayson Smiley</strong>
+            <em>Shop Manager · Lead Tech</em>
+          </div>
+        </div>
+        <a href="index.html#gallery" class="link-arrow"><span class="la-text">See our work</span> <span class="la-arrow">→</span></a>
+      </div>
+
+      <div class="about-photo">
+        <img src="assets/about.jpg" alt="Griffin O'Connor and Grayson Smiley at the O'Connor Detailing shop" class="about-img" />
+        <div class="about-photo-caption">
+          <span class="cap-dot"></span>
+          The '89 Mustang in our logo? That's my grandpa's. I rebuilt it during college. It's the reason I'm here.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== HOW WE WORK ====================== -->
+  <section class="services" id="how">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How we work</div>
+        <h2>What you can expect when you bring us a vehicle.</h2>
+        <p class="section-intro">No surprises. No upsells you don't need. Just a clear plan from the first call to handoff.</p>
+      </div>
+
+      <div class="services-grid">
+        <a href="contact.html" class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>1 · Honest assessment</h3>
+            </div>
+            <p>You send us a few photos or stop by. We look at the paint, talk through your goals, and tell you exactly what your car actually needs — even when that's less than you expected.</p>
+            <span class="service-cta">Start a quote <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <a href="contact.html" class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>2 · Clear, written quote</h3>
+            </div>
+            <p>You get a written estimate broken down by service. No hidden fees, no "we found something" mid-job phone calls. The number we quote is the number you pay.</p>
+            <span class="service-cta">Get yours <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <a href="index.html#gallery" class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>3 · The work</h3>
+            </div>
+            <p>Decontamination, correction, coating — done in our climate-controlled shop, hands-on by Griffin and Grayson. We send progress photos along the way so you're never wondering.</p>
+            <span class="service-cta">See examples <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <a href="contact.html" class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>4 · Handoff & aftercare</h3>
+            </div>
+            <p>We walk you through how to wash and care for the coating so it lasts. You leave with a maintenance plan, our number, and a car that looks better than the day you bought it.</p>
+            <span class="service-cta">Talk to us <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== VALUES ====================== -->
+  <section class="about" id="values">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <div class="eyebrow">What we stand for</div>
+        <h2>Three things we don't compromise on.</h2>
+        <p>
+          <strong>Honesty.</strong> If your paint doesn't need a full correction, we'll tell you. If a service isn't right for your driving, we'll talk you out of it. We'd rather earn a customer for life than upsell once.
+        </p>
+        <p>
+          <strong>Craft.</strong> Coatings are only as good as the prep. We don't cut prep corners — ever. That's why our work holds up years later when other shops' work doesn't.
+        </p>
+        <p>
+          <strong>Care.</strong> Your car sits in our bays alone. No dings, no swirl marks from a careless wash mitt, no second-shift rush jobs. We treat every car like our own, because that's the only way we know how to work.
+        </p>
+        <a href="reviews.html" class="link-arrow"><span class="la-text">Read what our clients say</span> <span class="la-arrow">→</span></a>
+      </div>
+
+      <div class="about-photo">
+        <img src="assets/mustang-ceramic.jpg" alt="Detailed Shelby Mustang in the O'Connor Detailing shop" class="about-img" loading="lazy" />
+        <div class="about-photo-caption">
+          <span class="cap-dot"></span>
+          Every coating we install is one we'd put on our own cars. We don't carry products we don't trust.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CREDENTIALS ====================== -->
+  <section class="services" id="credentials">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Credentials</div>
+        <h2>Trained, certified, and properly insured.</h2>
+        <p class="section-intro">Anyone can call themselves a detailer. Here's what backs us up.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>CCI Multi-Certified Installer</h3>
+            </div>
+            <p>Certified by Ceramic Coating Inc. across multiple coating products. We pass annual recertification and only install coatings we're trained on.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>Licensed Illinois LLC</h3>
+            </div>
+            <p>O'Connor Detailing is a registered Illinois LLC, in good standing — not a side hustle out of someone's driveway.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>$1M liability insurance</h3>
+            </div>
+            <p>Your vehicle is covered the entire time it's in our care. We can provide a current certificate on request.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-head">
+              <h3>Automotive tech background</h3>
+            </div>
+            <p>Griffin holds a degree in automotive tech. We understand cars beyond their paint — and we treat them accordingly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-cta section-cta--black">
+        <p>Ready to talk about your vehicle?</p>
+        <div class="section-cta-actions">
+          <a href="contact.html" class="btn btn-primary">Get My Free Quote</a>
+          <a href="tel:+13092294277" class="btn btn-ghost"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (309) 229-4277</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand brand--footer">
+          <img src="assets/logo.png" alt="O'Connor Detailing" class="brand-logo" />
+          <span class="brand-sub">Peoria's independent ceramic coating and paint correction shop.</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <h4>Contact</h4>
+        <a href="tel:+13092294277" class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          (309) 229-4277
+        </a>
+        <a href="mailto:detailingoconnor@gmail.com" class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          detailingoconnor@gmail.com
+        </a>
+        <span class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          4716 N Ellen Ct<br/>Peoria Heights, IL 61616
+        </span>
+        <span class="footer-contact-item hours">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          Monday – Friday: 8:00 AM – 4:00 PM<br/>Saturday – Sunday: Closed
+        </span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#ceramic">Ceramic Coating</a>
+        <a href="index.html#maintenance">Maintenance Detailing</a>
+        <a href="index.html#correction">Paint Correction</a>
+        <a href="index.html#tint">Window Tinting</a>
+        <a href="index.html#undercoat">Undercoating</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="about.html">About</a>
+        <a href="index.html#gallery">Our Work</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find the shop</h4>
+        <div class="map-embed" aria-label="Map of 4716 N Ellen Ct, Peoria Heights, IL">
+          <iframe
+            src="https://www.google.com/maps?q=4716+N+Ellen+Ct,+Peoria+Heights,+IL+61616&output=embed"
+            width="100%" height="160" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="O'Connor Detailing location map"></iframe>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/oconnordetailing/" target="_blank" rel="noopener" aria-label="Instagram" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.8h2.6l.4-3h-3V8.3c0-.9.2-1.5 1.5-1.5h1.6V4.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H7.9v3h2.6V21h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M19.3 8.4a5.6 5.6 0 01-3.3-1V15a5.5 5.5 0 11-4.8-5.5v2.4a3.1 3.1 0 102.2 3V3h2.5a3.4 3.4 0 003.4 3v2.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-fine">
+      <span>© <span id="year"></span> O'Connor Detailing · All rights reserved</span>
+      <span class="fine-links">
+        <a href="#">Privacy</a>
+        <span aria-hidden="true">·</span>
+        <a href="#">Terms</a>
+        <span aria-hidden="true">·</span>
+        <a href="contact.html">Get a quote</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- ====================== STICKY GOOGLE REVIEW BADGE ====================== -->
+  <a href="https://www.google.com/search?sca_esv=09173728c48945df&q=O%27Connor+Detailing+%26+Ceramic+Coating+Reviews" target="_blank" rel="noopener" class="gbadge" aria-label="See our Google reviews">
+    <span class="gbadge-logo" aria-hidden="true">
+      <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/><path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.6 15.4 18.9 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.4 6.3 14.7z"/><path fill="#FBBC05" d="M24 44c5.3 0 10-1.8 13.4-4.9l-6.2-5.2c-1.9 1.4-4.4 2.3-7.2 2.3-5.2 0-9.6-3.3-11.2-8l-6.5 5C9.6 39.5 16.2 44 24 44z"/><path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2C41.9 35.3 44 30 44 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
+    </span>
+    <span class="gbadge-body">
+      <span class="gbadge-top">
+        <strong class="gbadge-score">5.0</strong>
+        <span class="gbadge-stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+        </span>
+      </span>
+      <span class="gbadge-label"><strong>100+</strong> Google Reviews</span>
+    </span>
+  </a>
+
+  <!-- ====================== MOBILE STICKY CTA ====================== -->
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a href="tel:+13092294277" class="mcta mcta-call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="contact.html" class="mcta mcta-quote">
+      Get Quote
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+  <script>
+    window.__TWEAKS__ = /*EDITMODE-BEGIN*/{
+      "accent": "blue",
+      "headline": "underdog",
+      "hero": "dark",
+      "cards": "classic"
+    }/*EDITMODE-END*/;
+  </script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

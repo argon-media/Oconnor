@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script>
+  (function () {
+    try {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          var hadSw = regs && regs.length > 0;
+          regs.forEach(function (r) { r.unregister(); });
+          if (typeof caches !== 'undefined' && caches.keys) {
+            caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+            }).then(function () {
+              if (hadSw && !sessionStorage.getItem('__sw_killed')) {
+                sessionStorage.setItem('__sw_killed', '1');
+                location.reload();
+              }
+            });
+          }
+        });
+      }
+    } catch (e) {}
+  })();
+</script>
+<title>Contact O'Connor Detailing — Free Ceramic Coating Quote, Peoria IL</title>
+<meta name="description" content="Get in touch with O'Connor Detailing in Peoria Heights, IL. Call (309) 229-4277, email, or request a free, no-pressure quote — we reply within 1 business day." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Contact O'Connor Detailing — Peoria, IL" />
+<meta property="og:description" content="Free, no-pressure ceramic coating and paint correction quotes. CCI-certified shop in Peoria Heights, IL." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+<!-- LocalBusiness schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  "name": "O'Connor Detailing",
+  "image": "assets/logo.png",
+  "telephone": "+1-309-229-4277",
+  "email": "detailingoconnor@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4716 N Ellen Ct",
+    "addressLocality": "Peoria Heights",
+    "addressRegion": "IL",
+    "postalCode": "61616",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 40.7489, "longitude": -89.5712 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00", "closes": "16:00"
+  }],
+  "url": "https://oconnor-detailing.example/contact.html",
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <!-- ====================== STICKY HEADER ====================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="O'Connor Detailing, home">
+        <img src="assets/logo.png" alt="O'Connor Detailing" class="brand-logo" />
+        <span class="brand-sub brand-sub--header">Peoria Heights, IL</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-item has-menu">
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true" data-menu="services">Services <span class="caret">▾</span></button>
+          <div class="menu" id="menu-services" role="menu">
+            <a href="index.html#ceramic" role="menuitem"><strong>Ceramic Coatings</strong><em>Long-term paint protection</em></a>
+            <a href="index.html#maintenance" role="menuitem"><strong>Maintenance Detailing</strong><em>Keep it new between visits</em></a>
+            <a href="index.html#correction" role="menuitem"><strong>Paint Correction</strong><em>Swirl & scratch removal</em></a>
+            <a href="index.html#tint" role="menuitem"><strong>Window Tinting</strong><em>Heat & UV rejection</em></a>
+            <a href="index.html#undercoat" role="menuitem"><strong>Undercoating</strong><em>Rust prevention for IL winters</em></a>
+          </div>
+        </div>
+        <a href="index.html#gallery" class="nav-link">Our Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:+13092294277" class="phone-link" aria-label="Call O'Connor Detailing">
+          <span class="phone-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="phone-numbers">
+            <span class="phone-label">Call the shop</span>
+            <span class="phone-number">(309) 229-4277</span>
+          </span>
+        </a>
+        <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+
+      <button class="menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- mobile menu drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Our Work</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <div class="drawer-cta">
+        <a href="tel:+13092294277" class="btn btn-ghost-dark">(309) 229-4277</a>
+        <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <a id="top"></a>
+
+  <!-- ====================== PAGE HERO ====================== -->
+  <section class="hero hero--centered">
+    <div class="hero-inner">
+      <div class="eyebrow eyebrow--light">Contact</div>
+      <h1 class="hero-title">
+        Let's talk about your vehicle.<br />
+        <em>Honest answers, fair quotes.</em>
+      </h1>
+      <p class="hero-sub">
+        Call, email, or send us a few details — we reply within 1 business day. No pressure, ever.
+      </p>
+      <div class="hero-cta">
+        <a href="#quote" class="btn btn-primary btn-lg">Request a Quote</a>
+        <a href="tel:+13092294277" class="btn btn-ghost btn-lg"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (309) 229-4277</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== TRUST BAR ====================== -->
+  <section class="trust-bar" aria-label="Credentials">
+    <div class="container">
+      <div class="trust-strip">
+        <div class="trust-chip">
+          <span class="trust-chip-num">100+</span>
+          <span class="trust-chip-label">5-Star Google Reviews</span>
+        </div>
+        <div class="trust-chip-sep" aria-hidden="true"></div>
+        <div class="trust-chip trust-chip--logo trust-chip--logo-only">
+          <img src="assets/cci-logo.png" alt="CCI — Ceramic Coating Inc, Multi-Certified Installer" class="trust-chip-logo" />
+        </div>
+        <div class="trust-chip-sep" aria-hidden="true"></div>
+        <div class="trust-chip">
+          <span class="trust-chip-num">EST. 2023</span>
+          <span class="trust-chip-label">Peoria&nbsp;Heights, IL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CONTACT + FORM ====================== -->
+  <section class="cta-form" id="quote">
+    <div class="container cta-grid">
+      <div class="cta-pitch">
+        <div class="eyebrow eyebrow--light">How to reach us</div>
+        <h2>Talk to a real person — usually one of us.</h2>
+        <p>We answer our own phones. If you call during shop hours, you'll talk to Griffin or Grayson directly. Otherwise leave a message and we'll get back the same day.</p>
+
+        <div class="cta-contact-card">
+          <a href="tel:+13092294277" class="cta-contact-row">
+            <span class="cta-contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span><em>Call the shop</em><strong>(309) 229-4277</strong></span>
+          </a>
+          <a href="mailto:detailingoconnor@gmail.com" class="cta-contact-row">
+            <span class="cta-contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span><em>Email</em><strong>detailingoconnor@gmail.com</strong></span>
+          </a>
+          <a href="https://www.instagram.com/oconnordetailing/" target="_blank" rel="noopener" class="cta-contact-row">
+            <span class="cta-contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </span>
+            <span><em>Instagram</em><strong>@oconnordetailing</strong></span>
+          </a>
+          <div class="cta-contact-row cta-contact-row--static">
+            <span class="cta-contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span><em>Shop</em><strong>4716 N Ellen Ct, Peoria Heights, IL 61616</strong></span>
+          </div>
+          <div class="cta-contact-row cta-contact-row--static">
+            <span class="cta-contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span><em>Hours</em><strong>Mon–Fri · 8:00 am – 4:00 pm<br/>Sat–Sun · Closed</strong></span>
+          </div>
+        </div>
+
+        <figure class="cta-testimonial">
+          <div class="cta-testimonial-stars" aria-hidden="true">★★★★★</div>
+          <svg class="cta-testimonial-quote" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h4v4H7c0 3 2 4 3 4v2c-3 0-6-2-6-6V7zm9 0h4v4h-4c0 3 2 4 3 4v2c-3 0-6-2-6-6V7z"/></svg>
+          <blockquote>I was quoted thousands more at a dealer and they were up front that I didn't even need a full correction. Honest, skilled, and the Corvette is glass.</blockquote>
+          <figcaption>
+            <strong>David H.</strong>
+            <em>C8 Corvette · Google review</em>
+          </figcaption>
+        </figure>
+      </div>
+
+      <form class="quote-form" id="quoteForm" novalidate>
+        <div class="form-head">
+          <h3>Request a quote</h3>
+          <p>Takes about 30 seconds. We read every one.</p>
+          <ul class="form-trust">
+            <li>Reply within 1 business day</li>
+            <li>Free, no-pressure quotes</li>
+            <li>CCI certified · Licensed &amp; insured</li>
+          </ul>
+        </div>
+
+        <div class="form-row">
+          <label>Full Name
+            <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+          </label>
+        </div>
+        <div class="form-row form-row--2">
+          <label>Phone Number
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="(309) 555-0123" />
+          </label>
+          <label>Email Address
+            <input type="email" name="email" required autocomplete="email" placeholder="you@email.com" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Vehicle (Year / Make / Model)
+            <input type="text" name="vehicle" required placeholder="2023 Ford F-150 Lariat" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>What are you interested in?
+            <div class="select-wrap">
+              <select name="service" required>
+                <option value="">Pick a service…</option>
+                <option>Ceramic Coating</option>
+                <option>Maintenance Detailing</option>
+                <option>Paint Correction</option>
+                <option>Window Tinting</option>
+                <option>Undercoating</option>
+                <option>Not Sure Yet</option>
+              </select>
+              <span class="select-caret" aria-hidden="true">▾</span>
+            </div>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Anything else we should know? <span class="optional">(optional)</span>
+            <textarea name="notes" rows="3" placeholder="Garage kept, new car, prior coatings, timing needs…"></textarea>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Send My Request</button>
+
+        <p class="form-footnote">
+          We'll never share your info. No spam, ever. Prefer to talk?
+          <a href="tel:+13092294277">Call (309) 229-4277</a>.
+        </p>
+
+        <div class="form-success" hidden>
+          <div class="success-check" aria-hidden="true">✓</div>
+          <strong>Got it.</strong>
+          <p>We'll reply within 1 business day. If you need us sooner, just call <a href="tel:+13092294277">(309) 229-4277</a>.</p>
+        </div>
+        <div class="form-error" hidden>
+          <strong>Something went wrong on our end.</strong>
+          <p>Please try again, or call us directly at <a href="tel:+13092294277">(309) 229-4277</a>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====================== VISIT THE SHOP ====================== -->
+  <section class="gallery" id="visit">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Find the shop</div>
+        <h2>Drop by Peoria Heights.</h2>
+        <p class="section-intro">Appointment only — but we love showing the shop and answering questions in person.</p>
+      </div>
+
+      <div class="map-embed" aria-label="Map of 4716 N Ellen Ct, Peoria Heights, IL" style="border-radius:var(--radius);overflow:hidden;">
+        <iframe
+          src="https://www.google.com/maps?q=4716+N+Ellen+Ct,+Peoria+Heights,+IL+61616&output=embed"
+          width="100%" height="420" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="O'Connor Detailing location map"></iframe>
+      </div>
+
+      <div class="section-cta section-cta--black">
+        <p>Ready when you are.</p>
+        <div class="section-cta-actions">
+          <a href="#quote" class="btn btn-primary">Request a Quote</a>
+          <a href="tel:+13092294277" class="btn btn-ghost"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (309) 229-4277</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand brand--footer">
+          <img src="assets/logo.png" alt="O'Connor Detailing" class="brand-logo" />
+          <span class="brand-sub">Peoria's independent ceramic coating and paint correction shop.</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <h4>Contact</h4>
+        <a href="tel:+13092294277" class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          (309) 229-4277
+        </a>
+        <a href="mailto:detailingoconnor@gmail.com" class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          detailingoconnor@gmail.com
+        </a>
+        <span class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          4716 N Ellen Ct<br/>Peoria Heights, IL 61616
+        </span>
+        <span class="footer-contact-item hours">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          Monday – Friday: 8:00 AM – 4:00 PM<br/>Saturday – Sunday: Closed
+        </span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#ceramic">Ceramic Coating</a>
+        <a href="index.html#maintenance">Maintenance Detailing</a>
+        <a href="index.html#correction">Paint Correction</a>
+        <a href="index.html#tint">Window Tinting</a>
+        <a href="index.html#undercoat">Undercoating</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="about.html">About</a>
+        <a href="index.html#gallery">Our Work</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find the shop</h4>
+        <div class="map-embed" aria-label="Map of 4716 N Ellen Ct, Peoria Heights, IL">
+          <iframe
+            src="https://www.google.com/maps?q=4716+N+Ellen+Ct,+Peoria+Heights,+IL+61616&output=embed"
+            width="100%" height="160" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="O'Connor Detailing location map"></iframe>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/oconnordetailing/" target="_blank" rel="noopener" aria-label="Instagram" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.8h2.6l.4-3h-3V8.3c0-.9.2-1.5 1.5-1.5h1.6V4.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H7.9v3h2.6V21h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M19.3 8.4a5.6 5.6 0 01-3.3-1V15a5.5 5.5 0 11-4.8-5.5v2.4a3.1 3.1 0 102.2 3V3h2.5a3.4 3.4 0 003.4 3v2.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-fine">
+      <span>© <span id="year"></span> O'Connor Detailing · All rights reserved</span>
+      <span class="fine-links">
+        <a href="#">Privacy</a>
+        <span aria-hidden="true">·</span>
+        <a href="#">Terms</a>
+        <span aria-hidden="true">·</span>
+        <a href="#quote">Get a quote</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- ====================== STICKY GOOGLE REVIEW BADGE ====================== -->
+  <a href="https://www.google.com/search?sca_esv=09173728c48945df&q=O%27Connor+Detailing+%26+Ceramic+Coating+Reviews" target="_blank" rel="noopener" class="gbadge" aria-label="See our Google reviews">
+    <span class="gbadge-logo" aria-hidden="true">
+      <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/><path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.6 15.4 18.9 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.4 6.3 14.7z"/><path fill="#FBBC05" d="M24 44c5.3 0 10-1.8 13.4-4.9l-6.2-5.2c-1.9 1.4-4.4 2.3-7.2 2.3-5.2 0-9.6-3.3-11.2-8l-6.5 5C9.6 39.5 16.2 44 24 44z"/><path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2C41.9 35.3 44 30 44 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
+    </span>
+    <span class="gbadge-body">
+      <span class="gbadge-top">
+        <strong class="gbadge-score">5.0</strong>
+        <span class="gbadge-stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+        </span>
+      </span>
+      <span class="gbadge-label"><strong>100+</strong> Google Reviews</span>
+    </span>
+  </a>
+
+  <!-- ====================== MOBILE STICKY CTA ====================== -->
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a href="tel:+13092294277" class="mcta mcta-call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="#quote" class="mcta mcta-quote">
+      Get Quote
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+  <script>
+    window.__TWEAKS__ = /*EDITMODE-BEGIN*/{
+      "accent": "blue",
+      "headline": "underdog",
+      "hero": "dark",
+      "cards": "classic"
+    }/*EDITMODE-END*/;
+  </script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
