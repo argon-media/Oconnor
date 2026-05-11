@@ -197,12 +197,15 @@
       <div class="section-head section-head--center">
         <div class="eyebrow">What we believe</div>
         <h2>Four things we won't compromise on.</h2>
-        <p class="section-intro">No surprises, no rush jobs, no upsells. Every car we touch gets the same standard &mdash; ours.</p>
+        <p class="section-intro" style="margin-inline:auto;">No surprises, no rush jobs, no upsells. Every car we touch gets the same standard &mdash; ours.</p>
       </div>
 
       <div class="services-grid">
         <div class="service-card">
           <div class="service-body">
+            <span aria-hidden="true" style="display:inline-flex;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </span>
             <div class="service-head"><h3>Honesty</h3></div>
             <p>If your paint doesn't need a full correction, we'll tell you. If a service isn't right for how you drive, we'll talk you out of it. We'd rather lose a sale than burn trust.</p>
           </div>
@@ -210,6 +213,9 @@
 
         <div class="service-card">
           <div class="service-body">
+            <span aria-hidden="true" style="display:inline-flex;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg>
+            </span>
             <div class="service-head"><h3>Craftsmanship</h3></div>
             <p>A coating is only as good as the prep underneath. We don't skip steps to save hours &mdash; that's why our work still looks right years after we hand the keys back.</p>
           </div>
@@ -217,6 +223,9 @@
 
         <div class="service-card">
           <div class="service-body">
+            <span aria-hidden="true" style="display:inline-flex;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </span>
             <div class="service-head"><h3>Care</h3></div>
             <p>Your car sits in our bay alone. No careless wash mitts, no swirl-mark hand-offs, no second-shift rush jobs. We treat every vehicle like it's our own.</p>
           </div>
@@ -224,6 +233,9 @@
 
         <div class="service-card">
           <div class="service-body">
+            <span aria-hidden="true" style="display:inline-flex;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            </span>
             <div class="service-head"><h3>Communication</h3></div>
             <p>You'll hear from us throughout the build &mdash; daily updates, photos of the work in progress, no &ldquo;we'll let you know when it's done&rdquo; silence.</p>
           </div>
@@ -232,9 +244,17 @@
     </div>
   </section>
 
-  <!-- ====================== WHY CCI ====================== -->
+  <!-- ====================== WHY CCI (photo left) ====================== -->
   <section class="about" id="why-cci">
     <div class="container about-grid">
+      <div class="about-photo">
+        <img src="assets/mustang-ceramic.jpg" alt="Shelby Mustang in the O'Connor Detailing shop with CCI Advance Gloss ceramic coating" class="about-img" loading="lazy" />
+        <div class="about-photo-caption">
+          <span class="cap-dot"></span>
+          CCI Advance Gloss &middot; 3&ndash;5+ year protection.
+        </div>
+      </div>
+
       <div class="about-copy">
         <div class="eyebrow">Why CCI</div>
         <h2>We use the coatings <em>we'd put on our own cars.</em></h2>
@@ -246,62 +266,79 @@
         </p>
         <a href="index.html#ceramic" class="link-arrow"><span class="la-text">Explore our ceramic packages</span> <span class="la-arrow">&rarr;</span></a>
       </div>
+    </div>
+  </section>
 
-      <div class="about-photo">
-        <img src="assets/mustang-ceramic.jpg" alt="Shelby Mustang in the O'Connor Detailing shop with CCI Advance Gloss ceramic coating" class="about-img" loading="lazy" />
-        <div class="about-photo-caption">
-          <span class="cap-dot"></span>
-          CCI Advance Gloss &middot; 3&ndash;5+ year protection.
+  <!-- ====================== HOW WE WORK (centered head + photo/steps grid) ====================== -->
+  <section class="about" id="how">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <div class="eyebrow">Simple steps</div>
+        <h2>How we work.</h2>
+        <p style="margin-inline:auto;max-width:54ch;color:var(--fg-mute);font-size:18px;">No confusion, no delays. Just clear updates and consistent work.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="assets/paint-correction.jpg" alt="Paint correction in progress at the O'Connor Detailing shop" class="about-img" loading="lazy" />
+          <div class="about-photo-caption">
+            <span class="cap-dot"></span>
+            Decontamination, correction, coating &mdash; done in our climate-controlled bay.
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div style="display:flex;gap:18px;margin-bottom:32px;">
+            <span aria-hidden="true" style="flex-shrink:0;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:inline-flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <div>
+              <h3 style="margin:0 0 6px;font-size:18px;font-weight:700;">01 &middot; Honest assessment</h3>
+              <p style="margin:0;color:var(--fg-mute);font-size:15px;max-width:46ch;">You send a few photos or stop by. We look at the paint, talk through your goals, and tell you exactly what your car needs &mdash; even when that's less than you expected.</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:18px;margin-bottom:32px;">
+            <span aria-hidden="true" style="flex-shrink:0;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:inline-flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+            </span>
+            <div>
+              <h3 style="margin:0 0 6px;font-size:18px;font-weight:700;">02 &middot; Clear, written quote</h3>
+              <p style="margin:0;color:var(--fg-mute);font-size:15px;max-width:46ch;">A written estimate broken down by service. No hidden fees, no &ldquo;we found something&rdquo; mid-job calls. The number we quote is the number you pay.</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:18px;margin-bottom:32px;">
+            <span aria-hidden="true" style="flex-shrink:0;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:inline-flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg>
+            </span>
+            <div>
+              <h3 style="margin:0 0 6px;font-size:18px;font-weight:700;">03 &middot; The work, in our shop</h3>
+              <p style="margin:0;color:var(--fg-mute);font-size:15px;max-width:46ch;">Decontamination, correction, coating &mdash; hands-on by Griffin and Grayson in our climate-controlled bay. Daily photo updates so you're never in the dark.</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:18px;">
+            <span aria-hidden="true" style="flex-shrink:0;width:48px;height:48px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:inline-flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </span>
+            <div>
+              <h3 style="margin:0 0 6px;font-size:18px;font-weight:700;">04 &middot; Drive away protected</h3>
+              <p style="margin:0;color:var(--fg-mute);font-size:15px;max-width:46ch;">At pick-up we walk you through every step of the work and hand you a maintenance kit and care guide. You leave knowing how to protect the result for years.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================== HOW WE WORK (sticky split) ====================== -->
-  <section class="faq" id="how">
-    <div class="container faq-inner">
-      <div class="faq-left">
-        <div class="eyebrow">How we work</div>
-        <h2>From first call to handoff.</h2>
-        <p>Four steps. Zero surprises. Here's exactly what to expect when you bring us a vehicle.</p>
-        <a href="contact.html" class="link-arrow"><span class="la-text">Start a quote</span> <span class="la-arrow">&rarr;</span></a>
-      </div>
 
-      <div class="faq-list">
-        <details open>
-          <summary><span>01 &middot; Honest assessment</span><span class="chev">+</span></summary>
-          <div class="detail">
-            <p>You send a few photos or stop by. We look at the paint, talk through your goals, and tell you exactly what your car actually needs &mdash; even when that's less than you expected.</p>
-          </div>
-        </details>
-        <details>
-          <summary><span>02 &middot; Clear, written quote</span><span class="chev">+</span></summary>
-          <div class="detail">
-            <p>You get a written estimate broken down by service. No hidden fees, no &ldquo;we found something&rdquo; mid-job phone calls. The number we quote is the number you pay.</p>
-          </div>
-        </details>
-        <details>
-          <summary><span>03 &middot; The work, in our shop</span><span class="chev">+</span></summary>
-          <div class="detail">
-            <p>Decontamination, correction, coating &mdash; done in our climate-controlled bay, hands-on by Griffin and Grayson. Daily photo updates so you're never in the dark.</p>
-          </div>
-        </details>
-        <details>
-          <summary><span>04 &middot; Drive away protected</span><span class="chev">+</span></summary>
-          <div class="detail">
-            <p>At pick-up we walk you through every step of the work and hand you a maintenance kit and care guide. You leave knowing how to protect the result for years.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== REVIEW SPOTLIGHT ====================== -->
-  <section class="reviews" id="review-spotlight">
+  <!-- ====================== REVIEWS (mirrors homepage) ====================== -->
+  <section class="reviews" id="reviews">
     <div class="container">
       <div class="reviews-head reviews-head--center">
-        <div class="eyebrow">Don't take our word for it</div>
-        <h2>Real words from real Peoria drivers.</h2>
+        <div class="eyebrow">What our clients say</div>
+        <h2>Real reviews from real Peoria drivers.</h2>
         <a class="reviews-score" href="https://www.google.com/maps/place/O%27Connor+Detailing+%26+Ceramic+Coating/@40.7452877,-89.5820034,17z/data=!4m6!3m5!1s0xae470bf3e6f5a6ff:0xaebab385ac0fbbc8!8m2!3d40.7452877!4d-89.5820034!16s%2Fg%2F11tcjx4jd7" target="_blank" rel="noopener">
           <span class="reviews-score-glogo" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/><path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.6 15.4 18.9 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.4 6.3 14.7z"/><path fill="#FBBC05" d="M24 44c5.3 0 10-1.8 13.4-4.9l-6.2-5.2c-1.9 1.4-4.4 2.3-7.2 2.3-5.2 0-9.6-3.3-11.2-8l-6.5 5C9.6 39.5 16.2 44 24 44z"/><path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2C41.9 35.3 44 30 44 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
@@ -317,11 +354,28 @@
                 <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
               </span>
             </div>
-            <div class="reviews-score-label">Based on 100+ verified Google reviews</div>
+            <div class="reviews-score-label">Based on verified Google reviews</div>
           </div>
         </a>
       </div>
 
+      <!-- TESTIMONIAL VIDEOS -->
+      <div class="video-row" data-count="3">
+        <a class="video-card" href="https://www.youtube.com/watch?v=hbev8a7GFeo" target="_blank" rel="noopener" data-yt="hbev8a7GFeo">
+          <div class="video-thumb"><img src="https://i.ytimg.com/vi/hbev8a7GFeo/hqdefault.jpg" alt="" loading="lazy" /><span class="video-play" aria-hidden="true">&#9654;</span></div>
+          <div class="video-meta"><span class="video-kicker">Client testimonial</span><span class="video-label">Watch on YouTube</span></div>
+        </a>
+        <a class="video-card" href="https://www.youtube.com/watch?v=39X6_ZDIa3c" target="_blank" rel="noopener" data-yt="39X6_ZDIa3c">
+          <div class="video-thumb"><img src="https://i.ytimg.com/vi/39X6_ZDIa3c/hqdefault.jpg" alt="" loading="lazy" /><span class="video-play" aria-hidden="true">&#9654;</span></div>
+          <div class="video-meta"><span class="video-kicker">Client testimonial</span><span class="video-label">Watch on YouTube</span></div>
+        </a>
+        <a class="video-card" href="https://www.youtube.com/watch?v=vVQMIYkW0Hk" target="_blank" rel="noopener" data-yt="vVQMIYkW0Hk">
+          <div class="video-thumb"><img src="https://i.ytimg.com/vi/vVQMIYkW0Hk/hqdefault.jpg" alt="" loading="lazy" /><span class="video-play" aria-hidden="true">&#9654;</span></div>
+          <div class="video-meta"><span class="video-kicker">Client testimonial</span><span class="video-label">Watch on YouTube</span></div>
+        </a>
+      </div>
+
+      <!-- GOOGLE REVIEWS EMBED -->
       <div class="review-grid">
         <figure class="greview">
           <div class="greview-head">
@@ -346,10 +400,10 @@
 
         <figure class="greview">
           <div class="greview-head">
-            <div class="greview-avatar" style="background:#1f8a4d">D</div>
+            <div class="greview-avatar" style="background:#2b7de9">D</div>
             <div class="greview-ident">
-              <strong>Douglas D.</strong>
-              <em>07 July 2025 &middot; OCD Lifetime Ceramic, Level 1</em>
+              <strong>Dorie N.</strong>
+              <em>08 May 2025 &middot; Paint correction + Ceramic</em>
             </div>
             <span class="greview-glogo" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/><path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.6 15.4 18.9 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.4 6.3 14.7z"/><path fill="#FBBC05" d="M24 44c5.3 0 10-1.8 13.4-4.9l-6.2-5.2c-1.9 1.4-4.4 2.3-7.2 2.3-5.2 0-9.6-3.3-11.2-8l-6.5 5C9.6 39.5 16.2 44 24 44z"/><path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2C41.9 35.3 44 30 44 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
@@ -362,13 +416,42 @@
             <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
             <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
           </div>
-          <blockquote class="greview-text">Got the OCD Lifetime Ceramic Coating Package &mdash; Level 1. Car looks great. Griffin and his team did an amazing job. He even showed me a few blemishes I didn&rsquo;t see before. Shows how meticulous they are to the details!</blockquote>
+          <blockquote class="greview-text">There were scratches and swirl marks on the black paint. When he was finished applying paint correction and ceramic coating, they were gone. My vehicle now has an outstanding shine! I highly recommend his services and will be a returning customer.</blockquote>
+        </figure>
+
+        <figure class="greview">
+          <div class="greview-head">
+            <div class="greview-avatar" style="background:#e06c3b">R</div>
+            <div class="greview-ident">
+              <strong>Ryan S.</strong>
+              <em>15 May 2024 &middot; Paint correction + Ceramic</em>
+            </div>
+            <span class="greview-glogo" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/><path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.6 15.4 18.9 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.4 6.3 14.7z"/><path fill="#FBBC05" d="M24 44c5.3 0 10-1.8 13.4-4.9l-6.2-5.2c-1.9 1.4-4.4 2.3-7.2 2.3-5.2 0-9.6-3.3-11.2-8l-6.5 5C9.6 39.5 16.2 44 24 44z"/><path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2C41.9 35.3 44 30 44 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
+            </span>
+          </div>
+          <div class="greview-stars" aria-label="5 out of 5 stars">
+            <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          </div>
+          <blockquote class="greview-text">O&rsquo;Connor detailing did an exceptional job detailing, paint correcting and ceramic coating my vehicle! Their attention to detail was outstanding, and the final result exceeded my expectations. The team went above and beyond to ensure that my car looked its absolute best. Best in the business!</blockquote>
         </figure>
       </div>
 
       <p class="reviews-note">
-        <a href="reviews.html" class="link-arrow"><span class="la-text">Read all of our Google reviews</span> <span class="la-arrow">&rarr;</span></a>
+        <a href="reviews.html" class="link-arrow"><span class="la-text">Read all our Google reviews</span> <span class="la-arrow">&rarr;</span></a>
       </p>
+
+      <div class="section-cta section-cta--black">
+        <p>Be our next five-star review.</p>
+        <div class="section-cta-actions">
+          <a href="contact.html" class="btn btn-primary">Get My Free Quote</a>
+          <a href="tel:+13092294277" class="btn btn-ghost"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (309) 229-4277</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -398,16 +481,13 @@
     </div>
   </section>
 
-  <!-- ====================== CLOSING CTA ====================== -->
+  <!-- ====================== CLOSING CTA (accent callout card) ====================== -->
   <section class="about" id="next">
     <div class="container">
-      <div class="section-head section-head--center">
-        <div class="eyebrow">What's next</div>
-        <h2>Bring us your car. <em>We'll take it from here.</em></h2>
-      </div>
-      <div class="services-cta">
-        <a href="contact.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
-        <a href="tel:+13092294277" class="btn btn-ghost-dark btn-lg"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (309) 229-4277</a>
+      <div style="background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:clamp(48px,7vw,96px) clamp(24px,5vw,72px);text-align:center;">
+        <h2 style="color:var(--accent-ink);margin:0 0 14px;max-width:24ch;margin-inline:auto;line-height:1.05;">Bring us your car. <em style="font-style:italic;opacity:.95;">We'll take it from here.</em></h2>
+        <p style="color:rgba(255,255,255,.9);font-size:18px;max-width:52ch;margin:0 auto 32px;">A free, no-pressure quote with real photos in your reply &mdash; usually back the same business day.</p>
+        <a href="contact.html" class="btn btn-lg" style="background:var(--ink);color:#fff;border:1px solid var(--ink);">Get a Free Quote <span aria-hidden="true" style="margin-left:8px;">&rarr;</span></a>
       </div>
     </div>
   </section>
