@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script>
+  (function () {
+    try {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          var hadSw = regs && regs.length > 0;
+          regs.forEach(function (r) { r.unregister(); });
+          if (typeof caches !== 'undefined' && caches.keys) {
+            caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+            }).then(function () {
+              if (hadSw && !sessionStorage.getItem('__sw_killed')) {
+                sessionStorage.setItem('__sw_killed', '1');
+                location.reload();
+              }
+            });
+          }
+        });
+      }
+    } catch (e) {}
+  })();
+</script>
+<title>Blog &mdash; O'Connor Detailing &middot; Ceramic Coating Notes &amp; Peoria Detail Tips</title>
+<meta name="description" content="Field notes from O'Connor Detailing in Peoria Heights. Honest write-ups on ceramic coatings, paint correction, winter prep, and the questions clients ask us most." />
+
+<meta property="og:title" content="Blog &mdash; O'Connor Detailing" />
+<meta property="og:description" content="Detailing field notes, coating breakdowns, and Illinois-winter advice from the O'Connor shop." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+<link rel="icon" type="image/png" href="assets/logo.png" />
+<link rel="apple-touch-icon" href="assets/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <!-- ====================== STICKY HEADER ====================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="O'Connor Detailing, home">
+        <img src="assets/logo.png" alt="O'Connor Detailing" class="brand-logo" />
+        <span class="brand-sub brand-sub--header">Peoria Heights, IL</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav-item has-menu">
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true" data-menu="services">Services <span class="caret">&#9662;</span></button>
+          <div class="menu" id="menu-services" role="menu">
+            <a href="index.html#ceramic" role="menuitem"><strong>Ceramic Coatings</strong><em>Long-term paint protection</em></a>
+            <a href="index.html#maintenance" role="menuitem"><strong>Maintenance Detailing</strong><em>Keep it new between visits</em></a>
+            <a href="index.html#correction" role="menuitem"><strong>Paint Correction</strong><em>Swirl &amp; scratch removal</em></a>
+            <a href="index.html#tint" role="menuitem"><strong>Window Tinting</strong><em>Heat &amp; UV rejection</em></a>
+            <a href="index.html#undercoat" role="menuitem"><strong>Undercoating</strong><em>Rust prevention for IL winters</em></a>
+          </div>
+        </div>
+        <a href="index.html#gallery" class="nav-link">Our Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="blog.html" class="nav-link" aria-current="page">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:+13092294277" class="phone-link" aria-label="Call O'Connor Detailing">
+          <span class="phone-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="phone-numbers">
+            <span class="phone-label">Call the shop</span>
+            <span class="phone-number">(309) 229-4277</span>
+          </span>
+        </a>
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+
+      <button class="menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Our Work</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="contact.html">Contact</a>
+      <div class="drawer-cta">
+        <a href="tel:+13092294277" class="btn btn-ghost-dark">(309) 229-4277</a>
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <a id="top"></a>
+
+  <!-- ====================== PAGE HERO ====================== -->
+  <section class="hero hero--centered">
+    <div class="hero-media" aria-hidden="true" style="display:block">
+      <img class="hero-img" src="assets/ceramic.webp" alt="" />
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="eyebrow eyebrow--light">Field notes</div>
+      <h1 class="hero-title">
+        Notes from the shop.<br />
+        <em>Honest answers, in writing.</em>
+      </h1>
+      <p class="hero-sub">
+        The same questions our clients ask us in person &mdash; written down, with the real answers. No fluff, no SEO filler.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== FEATURED POST ====================== -->
+  <section class="about" id="featured">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:32px;">
+        <div class="eyebrow">Featured</div>
+        <h2>The post we send people most.</h2>
+      </div>
+
+      <a href="blog-post.html" style="display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,72px);align-items:center;text-decoration:none;color:inherit;">
+        <div style="position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:5/4;">
+          <img src="assets/mustang-ceramic.jpg" alt="CCI Advance Gloss ceramic coating on a red Shelby Mustang in the O'Connor shop" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease,ease);" />
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-mute);">
+            <span style="color:var(--accent);">Ceramic Coating</span>
+            <span aria-hidden="true">&middot;</span>
+            <span>8 min read</span>
+            <span aria-hidden="true">&middot;</span>
+            <span>April 28, 2026</span>
+          </div>
+          <h3 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 16px;letter-spacing:-0.01em;">How long does ceramic coating actually last in the real world?</h3>
+          <p style="font-size:18px;color:var(--fg-mute);margin:0 0 22px;max-width:48ch;">Manufacturer claims vs. what we see on cars two and three years later. The honest breakdown by coating tier, climate, and how you wash.</p>
+          <span class="link-arrow"><span class="la-text">Read the article</span> <span class="la-arrow">&rarr;</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================== POST GRID ====================== -->
+  <section class="services" id="all-posts">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <div class="eyebrow">All posts</div>
+          <h2>The rest of the field notes.</h2>
+        </div>
+        <p style="max-width:42ch;color:var(--on-dark-mute);font-size:16px;">Short reads on ceramic coatings, paint correction, winter prep, and the questions we hear from clients most.</p>
+      </div>
+
+      <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
+
+        <!-- Post 1 -->
+        <a href="blog-post.html" class="service-card" style="background:var(--ink-2);text-decoration:none;padding:0;overflow:hidden;">
+          <div style="aspect-ratio:5/3;overflow:hidden;">
+            <img src="assets/paint-correction.jpg" alt="Paint correction in progress" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">Paint Correction</span>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;color:var(--on-dark);">Paint correction vs. compounding &mdash; what's the actual difference?</h3>
+            <p style="margin:0;color:var(--on-dark-mute);font-size:14px;">Two terms used interchangeably online, but they mean different things in our shop. Here's how we use them.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;color:var(--on-dark-mute);font-size:12px;font-family:'JetBrains Mono',monospace;margin-top:4px;">
+              <span>April 12, 2026</span>
+              <span>6 min</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="blog-post.html" class="service-card" style="background:var(--ink-2);text-decoration:none;padding:0;overflow:hidden;">
+          <div style="aspect-ratio:5/3;overflow:hidden;">
+            <img src="assets/IMG_3782.jpg" alt="Truck after detailing" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">Winter Prep</span>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;color:var(--on-dark);">Protecting your paint through an Illinois winter.</h3>
+            <p style="margin:0;color:var(--on-dark-mute);font-size:14px;">Salt, brine, sand, freeze-thaw cycles. What we do in the fall to keep clients' paint from paying the bill in March.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;color:var(--on-dark-mute);font-size:12px;font-family:'JetBrains Mono',monospace;margin-top:4px;">
+              <span>March 22, 2026</span>
+              <span>5 min</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 3 -->
+        <a href="blog-post.html" class="service-card" style="background:var(--ink-2);text-decoration:none;padding:0;overflow:hidden;">
+          <div style="aspect-ratio:5/3;overflow:hidden;">
+            <img src="assets/ceramic.webp" alt="Ceramic coating bottle" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">Industry</span>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;color:var(--on-dark);">The truth about $300 ceramic coatings.</h3>
+            <p style="margin:0;color:var(--on-dark-mute);font-size:14px;">Why a coating quote varies from $300 to $3,000, and what you're actually paying for at each tier.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;color:var(--on-dark-mute);font-size:12px;font-family:'JetBrains Mono',monospace;margin-top:4px;">
+              <span>March 8, 2026</span>
+              <span>7 min</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 4 -->
+        <a href="blog-post.html" class="service-card" style="background:var(--ink-2);text-decoration:none;padding:0;overflow:hidden;">
+          <div style="aspect-ratio:5/3;overflow:hidden;">
+            <img src="assets/cci-logo.png" alt="CCI Multi-Certified Installer" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;background:#fff;padding:24px;" />
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">Shop Notes</span>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;color:var(--on-dark);">Why we chose CCI as our coating partner.</h3>
+            <p style="margin:0;color:var(--on-dark-mute);font-size:14px;">A short, unsexy story about chemistry, durability tests, and why we stopped chasing the next &ldquo;miracle&rdquo; coating.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;color:var(--on-dark-mute);font-size:12px;font-family:'JetBrains Mono',monospace;margin-top:4px;">
+              <span>February 14, 2026</span>
+              <span>4 min</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 5 -->
+        <a href="blog-post.html" class="service-card" style="background:var(--ink-2);text-decoration:none;padding:0;overflow:hidden;">
+          <div style="aspect-ratio:5/3;overflow:hidden;">
+            <img src="assets/IMG_3779.jpg" alt="Red Shelby Mustang detailing" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">Maintenance</span>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;color:var(--on-dark);">How to wash a coated car &mdash; without ruining it.</h3>
+            <p style="margin:0;color:var(--on-dark-mute);font-size:14px;">Two-bucket method, the wash mitts we actually use, and the four things drive-thru washes will do to your coating.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;color:var(--on-dark-mute);font-size:12px;font-family:'JetBrains Mono',monospace;margin-top:4px;">
+              <span>January 30, 2026</span>
+              <span>6 min</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 6 -->
+        <a href="blog-post.html" class="service-card" style="background:var(--ink-2);text-decoration:none;padding:0;overflow:hidden;">
+          <div style="aspect-ratio:5/3;overflow:hidden;">
+            <img src="assets/IMG_3784.jpg" alt="BMW X7 ceramic coating" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">New Car Owner</span>
+            <h3 style="margin:0;font-size:20px;line-height:1.25;color:var(--on-dark);">When to coat a brand-new car &mdash; and when to wait.</h3>
+            <p style="margin:0;color:var(--on-dark-mute);font-size:14px;">Dealerships push a coating on day one. Sometimes that's right. Often it isn't. Here's how we decide with each client.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;color:var(--on-dark-mute);font-size:12px;font-family:'JetBrains Mono',monospace;margin-top:4px;">
+              <span>January 11, 2026</span>
+              <span>5 min</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CLOSING CTA ====================== -->
+  <section class="about" id="next">
+    <div class="container">
+      <div style="position:relative;overflow:hidden;background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:clamp(48px,7vw,96px) clamp(24px,5vw,72px);text-align:center;">
+        <span aria-hidden="true" style="position:absolute;top:-30px;left:-30px;opacity:.10;transform:rotate(-12deg);">
+          <svg width="180" height="180" viewBox="0 0 48 48"><path fill="#fff" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/></svg>
+        </span>
+        <span aria-hidden="true" style="position:absolute;bottom:-40px;right:-40px;opacity:.12;transform:rotate(18deg);">
+          <svg width="220" height="220" viewBox="0 0 48 48"><path fill="#fff" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/></svg>
+        </span>
+        <div style="position:relative;z-index:1;">
+          <h2 style="color:var(--accent-ink);margin:0 0 14px;max-width:24ch;margin-inline:auto;line-height:1.05;">Got a question we haven't answered? <em style="font-style:italic;opacity:.95;">Just ask.</em></h2>
+          <p style="color:rgba(255,255,255,.9);font-size:18px;max-width:52ch;margin:0 auto 32px;">We'd rather spend ten minutes on the phone than have you guess.</p>
+          <a href="contact.html" class="btn btn-lg" style="background:var(--ink);color:#fff;border:1px solid var(--ink);">Get a Free Quote <span aria-hidden="true" style="margin-left:8px;">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand brand--footer">
+          <img src="assets/logo.png" alt="O'Connor Detailing" class="brand-logo" />
+          <span class="brand-sub">Peoria's independent ceramic coating and paint correction shop.</span>
+        </div>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <h4>Contact</h4>
+        <a href="tel:+13092294277" class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          (309) 229-4277
+        </a>
+        <a href="mailto:detailingoconnor@gmail.com" class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          detailingoconnor@gmail.com
+        </a>
+        <span class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          4716 N Ellen Ct<br/>Peoria Heights, IL 61616
+        </span>
+        <span class="footer-contact-item hours">
+          <span class="footer-contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          Monday &ndash; Friday: 8:00 AM &ndash; 4:00 PM<br/>Saturday &ndash; Sunday: Closed
+        </span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#ceramic">Ceramic Coating</a>
+        <a href="index.html#maintenance">Maintenance Detailing</a>
+        <a href="index.html#correction">Paint Correction</a>
+        <a href="index.html#tint">Window Tinting</a>
+        <a href="index.html#undercoat">Undercoating</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="about.html">About</a>
+        <a href="index.html#gallery">Our Work</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find the shop</h4>
+        <div class="map-embed" aria-label="Map of 4716 N Ellen Ct, Peoria Heights, IL">
+          <iframe
+            src="https://www.google.com/maps?q=O%27Connor+Detailing+%26+Ceramic+Coating,+Peoria+Heights,+IL&output=embed"
+            width="100%" height="160" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="O'Connor Detailing location map"></iframe>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/oconnordetailing/" target="_blank" rel="noopener" aria-label="Instagram" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.8h2.6l.4-3h-3V8.3c0-.9.2-1.5 1.5-1.5h1.6V4.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H7.9v3h2.6V21h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M19.3 8.4a5.6 5.6 0 01-3.3-1V15a5.5 5.5 0 11-4.8-5.5v2.4a3.1 3.1 0 102.2 3V3h2.5a3.4 3.4 0 003.4 3v2.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-fine">
+      <span>&copy; <span id="year"></span> O'Connor Detailing &middot; All rights reserved</span>
+      <span class="fine-links">
+        <a href="#">Privacy</a>
+        <span aria-hidden="true">&middot;</span>
+        <a href="#">Terms</a>
+        <span aria-hidden="true">&middot;</span>
+        <a href="contact.html">Get a quote</a>
+      </span>
+    </div>
+  </footer>
+
+  <a href="https://www.google.com/maps/place/O%27Connor+Detailing+%26+Ceramic+Coating/@40.7452877,-89.5820034,17z/data=!4m6!3m5!1s0xae470bf3e6f5a6ff:0xaebab385ac0fbbc8!8m2!3d40.7452877!4d-89.5820034!16s%2Fg%2F11tcjx4jd7" target="_blank" rel="noopener" class="gbadge" aria-label="See our Google reviews">
+    <span class="gbadge-logo" aria-hidden="true">
+      <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/><path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.6 15.4 18.9 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 16.3 4 9.7 8.4 6.3 14.7z"/><path fill="#FBBC05" d="M24 44c5.3 0 10-1.8 13.4-4.9l-6.2-5.2c-1.9 1.4-4.4 2.3-7.2 2.3-5.2 0-9.6-3.3-11.2-8l-6.5 5C9.6 39.5 16.2 44 24 44z"/><path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2C41.9 35.3 44 30 44 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
+    </span>
+    <span class="gbadge-body">
+      <span class="gbadge-top">
+        <strong class="gbadge-score">5.0</strong>
+        <span class="gbadge-stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F5A623"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+        </span>
+      </span>
+      <span class="gbadge-label"><strong>100+</strong> Google Reviews</span>
+    </span>
+  </a>
+
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a href="tel:+13092294277" class="mcta mcta-call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="contact.html" class="mcta mcta-quote">
+      Get Quote
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+
+  <script>
+    window.__TWEAKS__ = /*EDITMODE-BEGIN*/{
+      "accent": "blue",
+      "headline": "underdog",
+      "hero": "dark",
+      "cards": "classic"
+    }/*EDITMODE-END*/;
+  </script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
