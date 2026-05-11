@@ -250,7 +250,7 @@
   <section class="about" id="why-cci">
     <div class="container about-grid">
       <div class="about-photo">
-        <img src="assets/mustang-ceramic.jpg" alt="Shelby Mustang in the O'Connor Detailing shop with CCI Advance Gloss ceramic coating" class="about-img" loading="lazy" />
+        <img src="assets/mustang-ceramic.jpg" alt="Shelby Mustang in the O'Connor Detailing shop with CCI Advance Gloss ceramic coating" class="about-img" loading="lazy" style="aspect-ratio:1/1;" />
         <div class="about-photo-caption">
           <span class="cap-dot"></span>
           CCI Advance Gloss &middot; 3&ndash;5+ year protection.
@@ -279,7 +279,7 @@
         <h2>From first call to handoff.</h2>
       </div>
 
-      <ol class="process-steps">
+      <ol class="process-steps" style="grid-template-columns:repeat(4,1fr);">
         <li>
           <div class="step-num">01</div>
           <h3>Honest Assessment</h3>
@@ -427,47 +427,17 @@
     </div>
   </section>
 
-  <!-- ====================== CLOSING CTA (accent callout card with Google decorations) ====================== -->
-  <section class="about" id="next">
+  <!-- ====================== CLOSING CTA ====================== -->
+  <section class="about" id="next" style="padding-top:100px;">
     <div class="container">
-      <div style="position:relative;overflow:hidden;background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:clamp(48px,7vw,96px) clamp(24px,5vw,72px);text-align:center;">
-
-        <!-- Background decorations: Google G + stars, low opacity -->
-        <span aria-hidden="true" style="position:absolute;top:-30px;left:-30px;opacity:.10;transform:rotate(-12deg);">
-          <svg width="180" height="180" viewBox="0 0 48 48"><path fill="#fff" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/></svg>
+      <div style="background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:clamp(48px,7vw,96px) clamp(24px,5vw,72px);text-align:center;">
+        <span aria-hidden="true" style="display:inline-flex;align-items:center;gap:6px;margin-bottom:18px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.18);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#fff;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
+          5.0 on Google &middot; 100+ reviews
         </span>
-        <span aria-hidden="true" style="position:absolute;bottom:-40px;right:-40px;opacity:.12;transform:rotate(18deg);">
-          <svg width="220" height="220" viewBox="0 0 48 48"><path fill="#fff" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.2 6.1 29.4 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/></svg>
-        </span>
-        <span aria-hidden="true" style="position:absolute;top:30px;right:8%;opacity:.35;">
-          <svg width="44" height="44" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
-        </span>
-        <span aria-hidden="true" style="position:absolute;top:18%;left:6%;opacity:.30;">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
-        </span>
-        <span aria-hidden="true" style="position:absolute;bottom:18%;left:14%;opacity:.30;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
-        </span>
-        <span aria-hidden="true" style="position:absolute;bottom:24%;right:18%;opacity:.32;">
-          <svg width="38" height="38" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
-        </span>
-        <span aria-hidden="true" style="position:absolute;top:55%;right:4%;opacity:.28;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
-        </span>
-        <span aria-hidden="true" style="position:absolute;top:62%;left:3%;opacity:.25;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
-        </span>
-
-        <!-- Foreground content -->
-        <div style="position:relative;z-index:1;">
-          <span aria-hidden="true" style="display:inline-flex;align-items:center;gap:6px;margin-bottom:18px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.18);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#fff;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD86B"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10.3l6.3-.5L12 4l2.4 5.8 6.3.5-4.8 4.1 1.5 6.2z"/></svg>
-            5.0 on Google &middot; 100+ reviews
-          </span>
-          <h2 style="color:var(--accent-ink);margin:0 0 14px;max-width:24ch;margin-inline:auto;line-height:1.05;">Bring us your car. <em style="font-style:italic;opacity:.95;">We'll take it from here.</em></h2>
-          <p style="color:rgba(255,255,255,.9);font-size:18px;max-width:52ch;margin:0 auto 32px;">A free, no-pressure quote with real photos in your reply &mdash; usually back the same business day.</p>
-          <a href="contact.html" class="btn btn-lg" style="background:var(--ink);color:#fff;border:1px solid var(--ink);">Get a Free Quote <span aria-hidden="true" style="margin-left:8px;">&rarr;</span></a>
-        </div>
+        <h2 style="color:var(--accent-ink);margin:0 0 14px;max-width:24ch;margin-inline:auto;line-height:1.05;">Bring us your car. <em style="font-style:italic;opacity:.95;">We'll take it from here.</em></h2>
+        <p style="color:rgba(255,255,255,.9);font-size:18px;max-width:52ch;margin:0 auto 32px;">A free, no-pressure quote with real photos in your reply &mdash; usually back the same business day.</p>
+        <a href="contact.html" class="btn btn-lg" style="background:var(--ink);color:#fff;border:1px solid var(--ink);">Get a Free Quote <span aria-hidden="true" style="margin-left:8px;">&rarr;</span></a>
       </div>
     </div>
   </section>
